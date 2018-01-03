@@ -1,0 +1,26 @@
+{
+    "name": "misfist/learning",
+    "description": "Custom child theme for learning site",
+    "type": "project",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Pea",
+            "email": "pea@misfist.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+      "wpackagist-theme/wordstar": "^4.2"
+    },
+    "extra": {
+      "installer-paths": {
+        "./wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      }
+    }
+}
