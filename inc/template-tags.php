@@ -325,3 +325,63 @@ function learning_coauthors_box_by_term( $term ) {
   }
 
 }
+
+function learning_series_meta( $term ) {
+  $term_id = (int) $term->term_id;
+
+  echo '<ul><!--Begin -->';
+
+  /* Authors */
+  if( $authors = get_term_meta( $term_id, 'authors' ) ) {
+
+    echo '<li class="byline author p-author vcard hcard h-card" itemprop="author " itemscope itemtype="http://schema.org/Person">';
+    echo '  <i class="fa fa-user"></i>';
+    echo '  <span class="screen-reader-text">'. esc_html__( 'Author:', 'learning' ).'</span>';
+
+    learning_get_series_coauthors( $term );
+
+    echo '</li>';
+
+  }
+
+  /* Categories */
+  if ( $cat = get_term_meta( $term_id, 'category', true ) ) {
+    $cat = (int) $cat;
+    $category = get_category( $cat );
+
+      echo '<li class="cat-links">
+      <i class="fa fa-folder-open"></i>
+      <span class="screen-reader-text">'. esc_html__( 'Category:', 'learning' ).'</span> <a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) .
+    '</a></li>';
+  }
+
+  /* Tags */
+  if ( $tag_list = get_term_meta( $term_id, 'tags', true ) ) {
+      echo '<li class="tag-links">
+      <i class="fa fa-tags"></i>
+      <span class="screen-reader-text">'. esc_html__( 'Tags:', 'learning' ) . '</span>';
+
+      $max = count( $tag_list );
+      $count = 1;
+
+      foreach( $tag_list as $post_tag ) {
+        $post_tag = (int) $post_tag;
+        $tag = get_term( $post_tag );
+
+        echo '<a href="' . esc_url( get_tag_link( $tag->term_id ) ) . '">' . esc_html( $tag->name ) . '</a>';
+
+        if( $max === $count + 1 ) {
+          echo ' and ';
+        } elseif( $max > $count ) {
+          echo ', ';
+        }
+
+        $count++;
+      }
+
+    echo '</li>';
+  }
+
+  echo '</ul>';
+
+}
