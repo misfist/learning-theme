@@ -24,14 +24,14 @@
     <div class="entry-content e-content" itemprop="description articleBody">
       <?php
           /* translators: %s: Name of current post */
-          the_content(sprintf(__('Continue reading %s', 'wordstar'), the_title('<span class="screen-reader-text">', '</span>', false)));
+          the_content(sprintf(__('Continue reading %s', 'learning'), the_title('<span class="screen-reader-text">', '</span>', false)));
           wp_link_pages(
               array(
-              'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'wordstar') . '</span>',
+              'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'learning') . '</span>',
               'after'       => '</div>',
               'link_before' => '<span>',
               'link_after'  => '</span>',
-              'pagelink'    => '<span class="screen-reader-text">' . __('Page:', 'wordstar') . ' </span>%',
+              'pagelink'    => '<span class="screen-reader-text">' . __('Page:', 'learning') . ' </span>%',
               'separator'   => '<span class="screen-reader-text">, </span>',
               )
           );
@@ -42,18 +42,18 @@
       <?php // Parent post navigation.
       the_post_navigation(
           array(
-          'prev_text' =>'<span class="meta-nav">'.__('Published in', 'wordstar').'</span><span class="post-title">%title</span>',
+          'prev_text' =>'<span class="meta-nav">'.__('Published in', 'learning').'</span><span class="post-title">%title</span>',
           )
       ); ?>
     <?php elseif( is_singular('post') ) : ?>
       <?php // Previous/next post navigation.
       the_post_navigation(
           array(
-          'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'wordstar') . '</span> ' .
-          '<span class="screen-reader-text">' . __('Next post:', 'wordstar') . '</span> ' .
+          'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'learning') . '</span> ' .
+          '<span class="screen-reader-text">' . __('Next post:', 'learning') . '</span> ' .
           '<span class="post-title">%title</span>',
-          'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'wordstar') . '</span> ' .
-          '<span class="screen-reader-text">' . __('Previous post:', 'wordstar') . '</span> ' .
+          'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'learning') . '</span> ' .
+          '<span class="screen-reader-text">' . __('Previous post:', 'learning') . '</span> ' .
           '<span class="post-title">%title</span>',
           )
       ); ?>
