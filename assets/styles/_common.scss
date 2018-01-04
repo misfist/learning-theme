@@ -1,0 +1,21 @@
+body,
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#main .hentry,
+#secondary.sidebar .widget,
+section.no-results,
+.taxonomy-description {
+  font-size: 1rem;
+
+  &.post-content {
+    font-size: 1rem;
+
+    .entry-summary {
+      font-size: 1rem;
+    }
+  }
+
+}

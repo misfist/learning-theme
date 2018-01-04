@@ -1,9 +1,9 @@
 /*
 Theme Name:     Learning
-Theme URI:
+Theme URI:      https://github.com/misfist/learning-theme
 Description:    Wordstar child theme.
-Author:         Me
-Author URI:
+Author:         misfist
+Author URI:     https://github.com/misfist
 Template:       wordstar
 Version:        0.1.0
 */
@@ -13,6 +13,12 @@ Version:        0.1.0
  * # Variables
  */
 @import 'variables';
+
+/**
+ * # Mixins
+ */
+@import 'mixins';
+
 
 /**
  * # Common

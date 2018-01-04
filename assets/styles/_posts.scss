@@ -1,0 +1,33 @@
+#main {
+  &.archives {
+    .page-header {
+      border: none;
+    }
+    
+    .author-info {
+        padding: 20px 25px !important;
+        background: $color_bg_tinted;
+        display: block !important;
+
+        &:not(:first-of-type) {
+          border-top: 1px solid $color_border;
+        }
+
+        .author-description .author-bio {
+        	padding-top: .5rem;
+        	padding-bottom: 0;
+        	border-bottom: none;
+        }
+    }
+  }
+}
+
+/*#main.archives .author-info:not(:first-of-type) {
+	 border-top: 1px solid #dedede;
+}
+
+#main.archives .author-info .author-description .author-bio {
+	padding-top: .5rem;
+	padding-bottom: 0;
+	border-bottom: none;
+}*/

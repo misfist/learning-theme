@@ -1,9 +1,80 @@
 /*
 Theme Name:     Learning
-Theme URI:      
+Theme URI:      https://github.com/misfist/learning-theme
 Description:    Wordstar child theme.
-Author:         Me
-Author URI:     
+Author:         misfist
+Author URI:     https://github.com/misfist
 Template:       wordstar
 Version:        0.1.0
 */
+/**
+ * # Variables
+ */
+/**
+ * # Mixins
+ */
+/**
+ * Lists
+ */
+/**
+ * Screen Reader Text
+ */
+/**
+ * # Common
+ */
+body,
+html {
+  font-size: 16px;
+  line-height: 1.5; }
+
+#main .hentry,
+#secondary.sidebar .widget,
+section.no-results,
+.taxonomy-description {
+  font-size: 1rem; }
+  #main .hentry.post-content,
+  #secondary.sidebar .widget.post-content,
+  section.no-results.post-content,
+  .taxonomy-description.post-content {
+    font-size: 1rem; }
+    #main .hentry.post-content .entry-summary,
+    #secondary.sidebar .widget.post-content .entry-summary,
+    section.no-results.post-content .entry-summary,
+    .taxonomy-description.post-content .entry-summary {
+      font-size: 1rem; }
+
+/**
+ * # Structure
+ */
+/**
+ * # Elements
+ */
+/**
+ * # Posts
+ */
+#main.archives .page-header {
+  border: none; }
+
+#main.archives .author-info {
+  padding: 20px 25px !important;
+  background: #fbfbfc;
+  display: block !important; }
+  #main.archives .author-info:not(:first-of-type) {
+    border-top: 1px solid #dedede; }
+  #main.archives .author-info .author-description .author-bio {
+    padding-top: .5rem;
+    padding-bottom: 0;
+    border-bottom: none; }
+
+/*#main.archives .author-info:not(:first-of-type) {
+	 border-top: 1px solid #dedede;
+}
+
+#main.archives .author-info .author-description .author-bio {
+	padding-top: .5rem;
+	padding-bottom: 0;
+	border-bottom: none;
+}*/
+/**
+ * # Plugins
+ */
