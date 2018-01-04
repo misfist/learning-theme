@@ -48,12 +48,12 @@
 
             <?php if( $image_id = get_term_meta( $series->term_id, 'image', true ) ) : ?>
 
-              <?php $image_data = wp_get_attachment_image_src( $image_id, 'wordstar-post-big' ); ?>
+              <?php $image_data = wp_get_attachment_image_src( $image_id, 'thumbnail' ); ?>
               <?php $image = $image_data[0]; ?>
 
               <?php if( !empty( $image ) ) : ?>
                 <div class="post-thumbnail entry-media">
-                  <a class="" href="http://learning.dev/diving-further-into-the-world-of-wordpress/" aria-hidden="true">
+                  <a class="" href="<?php echo esc_url( get_term_link( $series ) ); ?>" aria-hidden="true">
                     <img src="<?php echo esc_url( $image ); ?>" class="photo u-photo wp-post-image" itemprop="image" srcset="<?php echo esc_url( $image ); ?>" />
                   </a>
                 </div>
