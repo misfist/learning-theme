@@ -6,7 +6,9 @@
  */
 ?>
 <div class="author-info">
-  <div class="author-avatar"> <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'linesh_author_bio_avatar_size',100 ) );?> </div>
+  <div class="author-avatar">
+    <?php echo coauthors_get_avatar( get_queried_object(), 'thumbnail' ); ?>
+  </div>
   <div class="author-description">
     <h1 class="author-title entry-title"><?php echo esc_html( get_the_author_meta( 'display_name' ) );?></h1>
     <?php if( $description = get_the_author_meta( 'description' ) ) : ?>
